@@ -1,0 +1,16 @@
+.idea
+.project
+*.sublime-*
+.DS_Store
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.swp
+*.swo
+coverage
+*.tgz
+*.xml
+/node_modules/
