@@ -15,5 +15,6 @@ stages:
       space: ${CF_SPACE}
       application: ${CF_APP}
     script: |
+      DOMAIN=$(cf domains | grep -m 1 shared | awk '{print $1}')
       cf push -m 1G "${CF_APP}"
-      cf map-route "${CF_APP}" mybluemix.net -n "${CF_APP}"-pm
+      cf map-route "${CF_APP}" ${DOMAIN} -n "${CF_APP}"-pm
